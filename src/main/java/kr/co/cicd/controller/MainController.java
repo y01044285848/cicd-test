@@ -14,7 +14,7 @@ public class MainController {
     @GetMapping("/")
     public String index(Model model){
         String version = buildProperties.getVersion();
-        model.addAttribute(version);
+        model.addAttribute("version", version);
 
         return "/index";
     }
